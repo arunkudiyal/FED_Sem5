@@ -81,6 +81,8 @@
 // const nums = [10, 'hello', true, null, undefined]
 // console.log(nums);
 // console.log(nums[1]);
+
+// nums = []
 // console.log(`Size - ${nums.length}`);
 
 // nums[1] = 'bye'
@@ -126,15 +128,110 @@
 //     else return num
 // })
 
-const nums = [1, 2, 3, 4, 5]
+// const nums = [1, 2, 3, 4, 5]
 
 // const updatedNums = nums.map((num) => { return num + 5 })
 // console.log(nums);
 // console.log(updatedNums);
 
 // 3. filter()
-const evens = nums.filter(num => { return num % 2 == 0 && num > 3 })
-const odds = nums.filter(num => num % 2 != 0)
-console.log(evens);
-console.log(odds);
+// const evens = nums.filter(num => { return num % 2 == 0 && num > 3 })
+// const odds = nums.filter(num => num % 2 != 0)
+// console.log(evens);
+// console.log(odds);
+
+
+// const nums = [4, 7, 21, 2, 372, 71, 273]
+
+// console.log(nums);
+// nums.sort((a, b) => { return b - a })
+// console.log(nums);
+
+
+// const nums = [10, 20, 30, 40]
+// console.log(nums);
+
+// let newLength = nums.push(50)
+// console.log(nums);
+// console.log(newLength);
+
+// let popped = nums.pop()
+// console.log(nums);
+// console.log(popped);
+
+// nums.splice(1, 1)
+// nums.splice(1, 10)
+// nums.splice(1, 2)
+// console.log(nums);
+
+// const nums = [10, 20, 30, 40, 50]
+// console.log(nums);
+
+// nums.shift()
+// console.log(nums);
+
+// nums.unshift(5, 10)
+// console.log(nums);
+
+
+// JS Objects --> { key: value }
+
+// const person = {
+//     id: 101,
+//     name: 'Person One',
+//     email: 'personone@domain.com',
+//     isAdult: true,
+//     hobbies: ['playing soccer', 'reading', 'writing'],
+//     printDetails: () => { console.log(`${person.id} --> ${person.name}`) },
+//     address: {
+//         city: 'Dehardun',
+//         state: 'Uttarakhand',
+//         country: 'India'
+//     }
+// }
+// console.log(person);
+// person.printDetails()
+// console.log(person.address.country);
+// console.log(person.hobbies[2]);
+
+
+// Array of Objects 
+const people = [
+    {
+        id: 101,
+        name: 'Person One',
+        email: 'personone@domain.com',
+        isAdult: true,
+        hobbies: ['playing soccer', 'reading', 'writing'],
+        printDetails: () => { console.log(`${person.id} --> ${person.name}`) },
+        address: {
+            city: 'Dehardun',
+            state: 'Uttarakhand',
+            country: 'India'
+        }
+    },
+    {
+        id: 102,
+        name: 'Person Two',
+        email: 'persontwo@domain.com',
+        isAdult: true,
+        hobbies: ['playing cricket', 'studying', 'scrolling'],
+        printDetails: () => { console.log(`${person.id} --> ${person.name}`) },
+        address: {
+            city: 'New Delhi',
+            state: 'New Delhi',
+            country: 'India'
+        }
+    }
+]
+
+console.log(people[1].hobbies[1]);
+
+
+const jsonData = JSON.stringify(people)
+console.log(jsonData);
+
+const convertedObj = JSON.parse(jsonData)
+console.log(convertedObj);
+
 
