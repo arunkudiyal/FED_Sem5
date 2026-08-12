@@ -35,6 +35,19 @@
 //     return num1 + num2;
 // }
 
+// function sum(num1, num2) {
+//     return num1 + num2;
+// }
+
+// console.log(sum(100, 20));
+// console.log(typeof (sum));
+
+
+// // ES6 Arrow Function
+// let substract = (a, b) => { return a - b; }
+// console.log(substract(100, 20));
+// console.log(typeof (substract));
+
 // INTERNAL TYPECAST
 // console.log(diff(200, 100));
 // console.log(diff('hello', 'bye'));
@@ -77,161 +90,49 @@
 // }, 2000)
 
 
-// ARRAYS --> collection of objects
-// const nums = [10, 'hello', true, null, undefined]
-// console.log(nums);
-// console.log(nums[1]);
-
-// nums = []
-// console.log(`Size - ${nums.length}`);
-
-// nums[1] = 'bye'
-// // nums = []
-// console.log(nums);
-
-// let nums1 = [10, 20, 30, 40, 50]
-// let x = new Array(1, 2, 3, 4, 5)
-
-// console.log(nums1);
-// console.log(x);
-
-// console.log(nums1);
-
-// // let nums2 = nums1;           // copy-address(refernce)
-// let nums2 = [...nums1]
-
-// console.log(nums2);
-
-// nums1[0] = 100
-// console.log(nums1);
-// console.log(nums2);
 
 
-// let nums = [10, 20, 30, 40, 50]
-// for (let i = 0; i < nums.length; i += 2) {
-//     console.log(`Element ${i} --> ${nums[i]}`)
+// Arrays
+// collection of similar data types
+// int[] arr = new int[5]
+// collection of objects
+
+// let arr = [10, 20, 30, 40]
+// console.log(arr);
+
+// let arr2 = new Array(100, 200, 300, 400)
+// console.log(arr2);
+
+// function print() {
+//     console.log('IT WORKS!')
+// }
+// let myArr = [100, 'hello', true, null, undefined, print]
+// console.log(myArr);
+// console.log(myArr.length);
+// console.log(myArr[2]);
+// myArr[5]()
+
+
+// let, var & const
+const nums = [100, 200, 300, 400, 500]
+console.log(nums);
+
+nums[1] = 20
+console.log(nums);
+
+// Q:- 
+// let numsCopy = nums
+// let numsCopy = []
+// for (let i = 0; i < nums.length; i++) {
+//     numsCopy[i] = nums[i]
 // }
 
+// SPREAD OPERATOR = ...
+let numsCopy = [...nums]
 
-// HIGER ORDER ARRAY METHODS
-// const nums = [1, 2, 3, 4, 5]
-// console.log(nums);
+nums[0] = 10
+nums[1] = 20
+console.log(nums);
+console.log(numsCopy);
 
-// 1. forEach
-// nums.forEach( (itrValue, index, arr) => { ... } )
-
-// nums.forEach((num, idx, arr) => console.log(`Element ${idx} --> ${num} | ${arr}`))
-
-// 2. map
-// const updatedNums = nums.map((num, idx) => {
-//     if (idx % 2 == 0) return num + 5
-//     else return num
-// })
-
-// const nums = [1, 2, 3, 4, 5]
-
-// const updatedNums = nums.map((num) => { return num + 5 })
-// console.log(nums);
-// console.log(updatedNums);
-
-// 3. filter()
-// const evens = nums.filter(num => { return num % 2 == 0 && num > 3 })
-// const odds = nums.filter(num => num % 2 != 0)
-// console.log(evens);
-// console.log(odds);
-
-
-// const nums = [4, 7, 21, 2, 372, 71, 273]
-
-// console.log(nums);
-// nums.sort((a, b) => { return b - a })
-// console.log(nums);
-
-
-// const nums = [10, 20, 30, 40]
-// console.log(nums);
-
-// let newLength = nums.push(50)
-// console.log(nums);
-// console.log(newLength);
-
-// let popped = nums.pop()
-// console.log(nums);
-// console.log(popped);
-
-// nums.splice(1, 1)
-// nums.splice(1, 10)
-// nums.splice(1, 2)
-// console.log(nums);
-
-// const nums = [10, 20, 30, 40, 50]
-// console.log(nums);
-
-// nums.shift()
-// console.log(nums);
-
-// nums.unshift(5, 10)
-// console.log(nums);
-
-
-// JS Objects --> { key: value }
-
-// const person = {
-//     id: 101,
-//     name: 'Person One',
-//     email: 'personone@domain.com',
-//     isAdult: true,
-//     hobbies: ['playing soccer', 'reading', 'writing'],
-//     printDetails: () => { console.log(`${person.id} --> ${person.name}`) },
-//     address: {
-//         city: 'Dehardun',
-//         state: 'Uttarakhand',
-//         country: 'India'
-//     }
-// }
-// console.log(person);
-// person.printDetails()
-// console.log(person.address.country);
-// console.log(person.hobbies[2]);
-
-
-// Array of Objects 
-const people = [
-    {
-        id: 101,
-        name: 'Person One',
-        email: 'personone@domain.com',
-        isAdult: true,
-        hobbies: ['playing soccer', 'reading', 'writing'],
-        printDetails: () => { console.log(`${person.id} --> ${person.name}`) },
-        address: {
-            city: 'Dehardun',
-            state: 'Uttarakhand',
-            country: 'India'
-        }
-    },
-    {
-        id: 102,
-        name: 'Person Two',
-        email: 'persontwo@domain.com',
-        isAdult: true,
-        hobbies: ['playing cricket', 'studying', 'scrolling'],
-        printDetails: () => { console.log(`${person.id} --> ${person.name}`) },
-        address: {
-            city: 'New Delhi',
-            state: 'New Delhi',
-            country: 'India'
-        }
-    }
-]
-
-console.log(people[1].hobbies[1]);
-
-
-const jsonData = JSON.stringify(people)
-console.log(jsonData);
-
-const convertedObj = JSON.parse(jsonData)
-console.log(convertedObj);
-
-
+// HIGHER ORDER ARRAY METHODS
