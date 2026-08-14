@@ -114,11 +114,12 @@
 
 
 // let, var & const
-const nums = [100, 200, 300, 400, 500]
-console.log(nums);
+// const nums = [100, 200, 300, 400, 500]
+// console.log(nums);
 
-nums[1] = 20
-console.log(nums);
+// nums[1] = 20
+// console.log(nums);
+// nums = []
 
 // Q:- 
 // let numsCopy = nums
@@ -128,11 +129,56 @@ console.log(nums);
 // }
 
 // SPREAD OPERATOR = ...
-let numsCopy = [...nums]
+// let numsCopy = [...nums]
 
-nums[0] = 10
-nums[1] = 20
+// nums[0] = 10
+// nums[1] = 20
+// console.log(nums);
+// console.log(numsCopy);
+
+
+
+// ES6 HIGHER ORDER ARRAY METHODS
+// gets applied to each elt in the array
+
+// const arr = [10, 15, 20, 25, 30, 35, 40]
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(`Index ${i} --> ${arr[i]}`)
+// }
+
+// 1. forEach()
+// arrName.forEach( callBackFunction )
+// arrName.forEach( (itrValue) => { } )
+// arr.forEach((value) => { console.log(value) })
+// arr.forEach(value => { console.log(value) })
+// arr.forEach(value => console.log(value))
+
+// const arr = [10, 15, 20, 25, 30, 35, 40]
+// arr.forEach((value, idx, arr) => { console.log(`Index ${idx} --> ${value} | ${arr}`) })
+
+// arr.forEach((value) => { console.log(`Square - ${value * value}`) })
+
+// 2. map()
+
+// const squares = arr.map(value => { return value * value })
+// console.log(arr);
+// console.log(squares);
+
+// let odds = arr.map((value) => {
+//     if (value % 2 != 0) return value
+//     else return 'EVEN'
+// })
+// console.log(odds);
+
+// 3. filter()
+const nums = [10, 15, 20, 25, 30, 35, 40]
+const evens = nums.filter(num => { return num % 2 == 0 })
+const odds = nums.filter(num => { return num % 2 != 0 })
+const vals = nums.filter(num => { return num > 0 })
+
 console.log(nums);
-console.log(numsCopy);
-
-// HIGHER ORDER ARRAY METHODS
+console.log(evens);
+console.log(odds);
+console.log(vals);
