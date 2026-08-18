@@ -173,12 +173,12 @@
 // console.log(odds);
 
 // 3. filter()
-const nums = [10, 15, 20, 25, 30, 35, 40]
-const evens = nums.filter(num => { return num % 2 == 0 })
-const odds = nums.filter(num => { return num % 2 != 0 })
-const vals = nums.filter(num => { return num > 0 })
+// const nums = [10, 15, 20, 25, 30, 35, 40]
+// const evens = nums.filter(num => { return num % 2 == 0 })
+// const odds = nums.filter(num => { return num % 2 != 0 })
+// const vals = nums.filter(num => { return num > 0 })
 
-console.log(nums);
-console.log(evens);
-console.log(odds);
-console.log(vals);
+// console.log(nums);
+// console.log(evens);
+// console.log(odds);
+// console.log(vals);
