@@ -68,74 +68,53 @@
 //     console.log('Text - Cut')
 // })
 
-// Event Parameter/Object --> Event --> meta-data
-// addEventListner --> 2nd para --> event parameter 
-// const btn = document.getElementById('my-btn')
-// const clickHandler = (event) => {
-//     console.log('Hello');
-//     console.log(event);
 
+// EVENT PARAM(OBJECT) --> addEventListener --> 2nd para --> parameter
+// Event --> meta-data
+// const btn1 = document.getElementById('submitBtn')
+// const btn2 = document.getElementById('my-btn')
+
+// console.log(btn1);
+// console.log(btn2);
+
+// const clickHandler = (e) => {
+//     e.preventDefault();
+//     console.log('SUBMIT Clicked!')
+//     console.log(e);
 // }
-// // btn.addEventListener('click', (event) => { clickHandler(event) })
-// btn.addEventListener('click', (event) => {
-//     console.log('Hello again');
-//     console.log(event);
+
+// btn1.addEventListener('click', (e) => { clickHandler(e) })
+
+// btn2.addEventListener('click', () => {
+//     console.log('BUTTON Clicked!')
 // })
 
 
-// Keyboard
+// Keyboard Events
+const box = document.getElementById('text-input')
+console.log(box);
 
-// const box = document.getElementById('text-input')
-// console.log(box);
-
-// box.addEventListener('keyup', (event) => {
-//     console.log(event.target.value)
+// Data on runtime while user types
+// box.addEventListener('keyup', (e) => {
+//     console.log(e.target.value)
 // })
 
+// Data not on runtime, on a button click
 // const btn = document.getElementById('submitBtn')
-// const box = document.getElementById('text-input')
-// const check = document.getElementById('my-check')
-
-// console.log(box.value)
-
 // btn.addEventListener('click', (e) => {
-//     e.preventDefault()
-//     console.log(box.value)
-//     console.log(check.value)
+//     e.preventDefault();
+
+//     const textValue = document.getElementById('text-input').value
+//     const rangeValue = document.getElementById('my-range').value
+
+//     console.log(textValue);
+//     console.log(rangeValue);
+
 // })
 
-// const myForm = document.getElementById('form')
-// console.log(myForm.firstElementChild)
 
-// console.log(myForm.firstElementChild.nextElementSibling);
-
-// console.log(myForm.parentElement)
-// console.log(myForm.previousElementSibling)
-
-
-// .createElement
-// const para = document.createElement('p')
-// console.log(para);
-// para.textContent = 'Welcome to Item Lister. It helps keep a track of all the items!'
-// para.setAttribute('id', 'app-intro')
-// para.setAttribute('style', 'color: yellow')
-
-// setTimeout(() => {
-//     document.getElementById('intro').appendChild(para)
-// }, 2000)
-
-
-const btn = document.getElementById('submitBtn')
-btn.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    const value = document.getElementById('text-input').value
-
-    const myLi = document.createElement('li')
-    myLi.setAttribute('class', 'list-group-item')
-    myLi.textContent = value
-
-    document.getElementById('items').appendChild(myLi)
-
-    document.getElementById('text-input').value = ''
-})
+const myH2 = document.createElement('h2')
+myH2.textContent = 'This is my H2'
+myH2.setAttribute('id', 'my-h2')
+myH2.setAttribute('class', 'my-h2-class')
+console.log(myH2);
