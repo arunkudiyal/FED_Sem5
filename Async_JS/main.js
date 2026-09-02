@@ -1,37 +1,24 @@
-const todos = [
-    { id: '1', name: 'Take out trash' },
-    { id: '2', name: 'Complete Assignment' },
-    { id: '3', name: 'Go for a walk' },
+const tasks = [
+    { id: 1, name: 'Task - 1', desc: 'Task 1 Desc' },
+    { id: 2, name: 'Task - 2', desc: 'Task 2 Desc' },
+    { id: 3, name: 'Task - 3', desc: 'Task 3 Desc' }
 ]
 
-// const getTaskName = () => {
-//     setTimeout(() => {
-//         todos.forEach(todo => console.log(todo.name))
-//     }, 2000)
-// }
-
-// const createTask = (task) => {
-//     setTimeout(() => {
-//         todos.push(task)
-//     }, 3000)
-// }
-
-// createTask({ id: '4', name: 'Go for shopping' })
-// getTaskName()
-
-// CALLBACK
-
-const getTaskName = () => {
+const printTaskName = () => {
     setTimeout(() => {
-        todos.forEach(todo => console.log(todo.name))
-    }, 2000)
-}
-
-const createTask = (task, callback) => {
-    setTimeout(() => {
-        todos.push(task)
-        callback()
+        tasks.forEach(task => console.log(task.name))
     }, 3000)
 }
 
-createTask({ id: '4', name: 'Go for shopping' }, getTaskName)
+const createTask = (task, cb) => {
+    setTimeout(() => {
+        tasks.push(task)
+        // ERROR
+        let error = true
+        if (!error) {
+            cb();
+        }
+    }, 2000)
+}
+
+createTask({ id: 4, name: 'Task - 4', desc: 'Task 4 Desc' }, printTaskName)

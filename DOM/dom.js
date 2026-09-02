@@ -91,8 +91,8 @@
 
 
 // Keyboard Events
-const box = document.getElementById('text-input')
-console.log(box);
+// const box = document.getElementById('text-input')
+// console.log(box);
 
 // Data on runtime while user types
 // box.addEventListener('keyup', (e) => {
@@ -109,12 +109,44 @@ console.log(box);
 
 //     console.log(textValue);
 //     console.log(rangeValue);
-
 // })
 
+// RELATIONSHIPS
+// 1. children
+// const myForm = document.getElementById('form')
 
-const myH2 = document.createElement('h2')
-myH2.textContent = 'This is my H2'
-myH2.setAttribute('id', 'my-h2')
-myH2.setAttribute('class', 'my-h2-class')
-console.log(myH2);
+// console.log(myForm.children);
+// console.log(myForm.parentElement);
+
+// console.log(myForm.children[1]);
+
+// // 2.siblings
+// // console.log(myForm.children[1].previousSibling);
+// // console.log(myForm.children[1].nextSibling);
+
+// console.log(myForm.children[1].previousElementSibling.parentElement);
+// // console.log(myForm.children[1].nextElementSibling.previousElementSibling);
+
+// console.log(myForm.firstElementChild);
+// console.log(myForm.lastElementChild);
+
+// console.log(myForm.firstChild);
+// console.log(myForm.lastChild);
+
+
+// JS can make HTML elements
+// const myPara = document.createElement('h4')
+
+// myPara.textContent = 'This is my paragraph'
+
+// myPara.setAttribute('id', 'my-para-id')
+// myPara.setAttribute('class', 'my-para-class')
+// myPara.setAttribute('style', 'color: yellow')
+
+// console.log(myPara);
+
+// const btn = document.getElementById('submitBtn')
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     document.getElementById('header-parent').appendChild(myPara)
+// })
