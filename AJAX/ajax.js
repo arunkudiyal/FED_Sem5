@@ -1,22 +1,21 @@
-console.log('AJAX')
-
-// AJAX / XHR
-
+// s1 --> create the object of XHR
+const xhr = new XMLHttpRequest();
 const url = 'https://api.github.com/users'
+console.log(xhr.readyState) // 0
 
-// s1 --> create an object of XHR
-const xhr = new XMLHttpRequest()
-console.log(xhr.readyState)
-
-// s2 --> open the portal of communication b/w client & server
+// s2 --> open a portal of communication b/w client & server
 xhr.open('GET', url)
-console.log(xhr.readyState)
+console.log(xhr.readyState) // 1
 
-// vvImp s3 --> react to onreadystatechange
+// s3 --> 
+// readyState --> state value, which tells request is ready or not
 xhr.onreadystatechange = () => {
-    console.log(xhr.readyState)
+    console.log(xhr.readyState) // 2 --> 3 --> 4
     if (xhr.readyState == 4) {
-        console.log(xhr.responseText)
+        const resObj = JSON.parse(xhr.responseText)
+        for (let i = 0; i < resObj.length; i++) {
+            console.log(resObj[i].avatar_url)
+        }
     }
 }
 

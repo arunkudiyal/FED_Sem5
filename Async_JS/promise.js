@@ -29,3 +29,8 @@ const createTask = (task) => {
 createTask({ id: '4', name: 'Task - 4', desc: 'Task 4 Desc' })
     .then(printTaskName)
     .catch(err => console.error('Something went wrong!'))
+
+
+fetch()
+    .then()
+    .catch()
