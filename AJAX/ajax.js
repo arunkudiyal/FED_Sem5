@@ -8,27 +8,26 @@ console.log(xhr.readyState) // 0
 xhr.open('GET', url)
 console.log(xhr.readyState) // 1
 
-// s3 --> 
+// s4 --> 
 // readyState --> state value, which tells request is ready or not
 xhr.onreadystatechange = () => {
-    console.log(xhr.readyState) // 2 --> 3 --> 4
-    if (xhr.readyState == 4) {
+    console.log(xhr.readyState)     // 1 --> 2 --> 3 --> 4
+    if (xhr.readyState == 4 && xhr.status == 200) {
         const resObj = JSON.parse(xhr.responseText)
         let output = ''
         for (let i = 0; i < resObj.length; i++) {
             output += `
                 <div>
-                    <img style="height: 500px; width: 500px;" src="${resObj[i].avatar_url}" />
-                    <br />
+                    <img style="height: 250px; width: 250px;" src="${resObj[i].avatar_url}" />
                     <h2>${resObj[i].login}</h2>
-                    <a href="${resObj[i].html_url} target="_blank ">Visit GitHub</a>
-                </div>  
+                    <a href="${resObj[i].html_url}">Profile</a>
+                </div>
                 <hr />
             `
         }
-        console.log(output)
         document.getElementById('main').innerHTML = output
     }
 }
 
-xhr.send()
+// s3 --> send the request
+xhr.send();                 // readyState = 2
