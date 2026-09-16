@@ -10,17 +10,23 @@ const printTaskName = () => {
     }, 5000)
 }
 
-const createTask = (task, callback) => {
-    setTimeout(() => {
-        tasks.push(task)
-        // ERROR
-        let error = true
-        if (!error) {
-            callback()
-        }
-    }, 2000)
+const createTask = (task) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            tasks.push(task)
+            // ERROR
+            let error = true
+            if (!error) {
+                resolve()
+            } else {
+                reject
+            }
+        }, 2000)
+    })
 }
 
 
-createTask({ id: '104', name: 'Task - 4', desc: 'Task - 4 Desc' }, printTaskName)
+createTask({ id: '104', name: 'Task - 4', desc: 'Task - 4 Desc' })
+    .then(printTaskName)
+    .catch(err => console.log('Something went wrong'))
 // printTaskName() --> X
